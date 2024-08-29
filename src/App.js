@@ -141,12 +141,7 @@ function App() {
 
   return (
     <>
-
-
-
-
       <div className="App bg-slate-900 min-h-screen max-w-screen text-white py-5">
-
         {isFirstLoad ? (
           <>
             <div className="flex-center w-full h-full">
@@ -181,16 +176,17 @@ function App() {
                 contracts={contract}
               />
               <Display contracts={contract} accounts={account} />
-              {/* <div style={{"background":"white"}}> */}
               {!modalOpen && (
-                <button className="share" onClick={() => setModalOpen(true)}>
+                <button
+                  className="bg-violet-500 border-2 border-violet-500 hover:text-violet-400 hover:bg-transparent cursor-pointer px-2.5 py-2 rounded"
+                  onClick={() => setModalOpen(true)}
+                >
                   Share
                 </button>
               )}
               {modalOpen && (
                 <Modal setModalOpen={setModalOpen} contract={contract}></Modal>
               )}
-              {/* </div> */}
             </div>
           </div>
         )}
